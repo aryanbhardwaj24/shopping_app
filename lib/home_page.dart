@@ -54,6 +54,7 @@ class HomePage extends StatelessWidget {
               height: 120,
               child: ListView.builder(
                 itemCount: filters.length,
+                scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final filter = filters[index];
                   return Chip(
