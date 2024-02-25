@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,14 +13,19 @@ class HomePage extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  'Shoes\nCollection',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35,
+                Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    'Shoes\nCollection',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                    ),
                   ),
                 ),
-                TextField(),
+                Expanded(
+                  child: TextField(),
+                ),
               ],
             ),
           ],
