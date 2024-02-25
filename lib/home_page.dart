@@ -70,6 +70,9 @@ class HomePage extends StatelessWidget {
                       labelStyle: const TextStyle(
                         fontSize: 16,
                       ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32),
+                      ),
                     ),
                   );
                 },
