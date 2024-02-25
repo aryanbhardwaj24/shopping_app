@@ -9,10 +9,6 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text(
           'Shopping App',
-          style: TextStyle(
-            fontFamily: 'Lato',
-            fontWeight: FontWeight.bold,
-          ),
         ),
       ),
     );
