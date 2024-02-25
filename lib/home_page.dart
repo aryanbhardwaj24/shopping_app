@@ -5,6 +5,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<String> filters = [
+      'All',
+      'Adidas',
+      'Nike',
+      'Bata',
+    ];
+
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromRGBO(225, 225, 225, 1),
@@ -14,11 +21,11 @@ class HomePage extends StatelessWidget {
       ),
     );
 
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 Padding(
                   padding: EdgeInsets.all(20.0),
