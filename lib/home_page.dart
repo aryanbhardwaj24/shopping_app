@@ -24,7 +24,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: TextField(),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                    ),
+                  ),
                 ),
               ],
             ),
