@@ -57,8 +57,13 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final filter = filters[index];
-                  return Chip(
-                    label: Text(filter),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0,
+                    ),
+                    child: Chip(
+                      label: Text(filter),
+                    ),
                   );
                 },
               ),
