@@ -62,7 +62,14 @@ class HomePage extends StatelessWidget {
                       horizontal: 8.0,
                     ),
                     child: Chip(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 15,
+                      ),
                       label: Text(filter),
+                      labelStyle: const TextStyle(
+                        fontSize: 16,
+                      ),
                     ),
                   );
                 },
