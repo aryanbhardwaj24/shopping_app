@@ -73,6 +73,7 @@ class HomePage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
                       ),
+                      backgroundColor: const Color.fromRGBO(245, 247, 249, 1),
                     ),
                   );
                 },
