@@ -8,15 +8,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<String> filters = const [
+    'All',
+    'Adidas',
+    'Nike',
+    'Bata',
+  ];
+
+  late String selectedFilter;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedFilter = filters[0];
+  }
+
   @override
   Widget build(BuildContext context) {
-    const List<String> filters = [
-      'All',
-      'Adidas',
-      'Nike',
-      'Bata',
-    ];
-
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromRGBO(225, 225, 225, 1),
@@ -66,19 +74,26 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(
                       horizontal: 8.0,
                     ),
-                    child: Chip(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 15,
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedFilter = filter;
+                      },
+                      child: Chip(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 15,
+                        ),
+                        label: Text(filter),
+                        labelStyle: const TextStyle(
+                          fontSize: 16,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        backgroundColor: selectedFilter == filter
+                            ? Theme.of(context).colorScheme.primary
+                            : const Color.fromRGBO(245, 247, 249, 1),
                       ),
-                      label: Text(filter),
-                      labelStyle: const TextStyle(
-                        fontSize: 16,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      backgroundColor: const Color.fromRGBO(245, 247, 249, 1),
                     ),
                   );
                 },
