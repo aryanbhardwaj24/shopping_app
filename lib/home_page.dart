@@ -76,7 +76,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: GestureDetector(
                       onTap: () {
-                        selectedFilter = filter;
+                        setState(() {
+                          selectedFilter = filter;
+                        });
                       },
                       child: Chip(
                         padding: const EdgeInsets.symmetric(
