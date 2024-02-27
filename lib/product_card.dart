@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
+  final String title;
+
   const ProductCard({
     super.key,
+    required this.title,
   });
 
   @override
@@ -10,7 +13,9 @@ class ProductCard extends StatelessWidget {
     return Container(
       color: const Color.fromRGBO(216, 240, 253, 1),
       child: Column(
-        children: [],
+        children: [
+          Text(title),
+        ],
       ),
     );
   }

@@ -103,11 +103,15 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            ListView.builder(
-              itemCount: products.length,
-              itemBuilder: (context, index) {
-                final product = products[index];
-              },
+            Expanded(
+              child: ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  final product = products[index];
+
+                  return ProductCard(title: 'Hello!!');
+                },
+              ),
             ),
           ],
         ),
