@@ -19,6 +19,11 @@ class ProductDetailsPage extends StatelessWidget {
             product['title'] as String,
             style: Theme.of(context).textTheme.titleLarge,
           ),
+          const Spacer(),
+          Image.asset(product['imageUrl'] as String),
+          const Spacer(
+            flex: 2,
+          ),
         ],
       ),
     );
