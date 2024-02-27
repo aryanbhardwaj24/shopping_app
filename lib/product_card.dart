@@ -16,27 +16,31 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromRGBO(216, 240, 253, 1),
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            '\$$price',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Image.asset(
-            image,
-            height: 175,
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              '\$$price',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Image.asset(
+              image,
+              height: 175,
+            ),
+          ],
+        ),
       ),
     );
   }
