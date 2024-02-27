@@ -110,8 +110,9 @@ class _HomePageState extends State<HomePage> {
                   final product = products[index];
 
                   return ProductCard(
-                    title: 'Hello!!',
-                    price: 25.2,
+                    title: product['title'] as String,
+                    price: product['price'] as double,
+                    image: product['imageUrl'] as String,
                   );
                 },
               ),
