@@ -15,9 +15,12 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromRGBO(216, 240, 253, 1),
       margin: const EdgeInsets.all(20),
       padding: const EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        color: const Color.fromRGBO(216, 240, 253, 1),
+        borderRadius: BorderRadius.circular(20),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
