@@ -109,7 +109,10 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (context, index) {
                   final product = products[index];
 
-                  return ProductCard(title: 'Hello!!');
+                  return ProductCard(
+                    title: 'Hello!!',
+                    price: 25.2,
+                  );
                 },
               ),
             ),
