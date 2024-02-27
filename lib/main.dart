@@ -37,6 +37,12 @@ class MyApp extends StatelessWidget {
             fontSize: 16,
           ),
         ),
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          ),
+        ),
       ),
       home: const ProductDetailsPage(),
     );
