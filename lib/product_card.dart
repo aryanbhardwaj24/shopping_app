@@ -28,6 +28,7 @@ class ProductCard extends StatelessWidget {
           ),
           Image(
             image: AssetImage(image),
+            height: 175,
           ),
         ],
       ),
