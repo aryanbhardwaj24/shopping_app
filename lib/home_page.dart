@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   late String selectedFilter;
+  int currentPage = 0;
 
   @override
   void initState() {
@@ -133,6 +134,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+          setState(() {
+            currentPage = value;
+          });
+        },
+        currentIndex: currentPage,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
