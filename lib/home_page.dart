@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 32,
         onTap: (value) {
           setState(() {
             currentPage = value;
@@ -32,13 +33,13 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.home,
             ),
-            label: '',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_cart,
             ),
-            label: '',
+            label: 'Cart',
           ),
         ],
       ),
