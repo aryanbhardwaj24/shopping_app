@@ -28,8 +28,6 @@ class _ProductListState extends State<ProductList> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
-
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromRGBO(225, 225, 225, 1),
@@ -103,13 +101,15 @@ class _ProductListState extends State<ProductList> {
             ),
           ),
           Expanded(
-            child: size.width > 650
-                ? GridView.builder(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth > 1080) {
+                  return GridView.builder(
                     itemCount: products.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 2,
+                      childAspectRatio: 1.75,
                     ),
                     itemBuilder: (context, index) {
                       final product = products[index];
@@ -134,8 +134,9 @@ class _ProductListState extends State<ProductList> {
                         ),
                       );
                     },
-                  )
-                : ListView.builder(
+                  );
+                } else {
+                  return ListView.builder(
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       final product = products[index];
@@ -160,7 +161,10 @@ class _ProductListState extends State<ProductList> {
                         ),
                       );
                     },
-                  ),
+                  );
+                }
+              },
+            ),
           ),
         ],
       ),
