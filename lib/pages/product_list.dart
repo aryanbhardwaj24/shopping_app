@@ -28,7 +28,7 @@ class _ProductListState extends State<ProductList> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
 
     const border = OutlineInputBorder(
       borderSide: BorderSide(
