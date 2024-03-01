@@ -15,10 +15,11 @@ A Flutter-based mobile application for shopping, featuring a user-friendly inter
 ## Screenshots
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="docs/home_page.png" alt="Home Page" width="250"/>
-  <img src="docs/product_details_page.png" alt="Product Details" width="250"/>
+  <img src="docs/home_page.png" alt="Home Page" width="250" style="margin-right: 15px;"/>
+  <img src="docs/product_details_page.png" alt="Product Details" width="250" style="margin-right: 15px;"/>
   <img src="docs/cart.png" alt="Shopping Cart" width="250"/>
 </div>
+
 
 ## Installation
 
