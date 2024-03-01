@@ -29,7 +29,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const Spacer(),
-          Image.asset(widget.product['imageUrl'] as String),
+          Image.asset(
+            widget.product['imageUrl'] as String,
+            height: 250,
+          ),
           const Spacer(
             flex: 2,
           ),
@@ -114,7 +117,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).colorScheme.primary,
-                      minimumSize: const Size(double.infinity, 50),
+                      fixedSize: const Size(350, 50),
                     ),
                     label: const Text(
                       'Add To Cart',
